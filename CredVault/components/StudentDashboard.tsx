@@ -49,7 +49,7 @@ const StudentDashboard = () => {
       {user && (
         <div className="mb-4 flex items-center space-x-2">
           <p className="text-lg font-medium">Wallet: {user.publicKey?.toBase58().substring(0, 8)}...</p>
-          <Badge variant={user.verificationLevel === 'verified' ? 'success' : user.verificationLevel === 'basic' ? 'info' : 'default'}>
+          <Badge variant={user.verificationLevel === 'verified' ? 'verified' : 'pending'}>
             {user.verificationLevel}
           </Badge>
         </div>
