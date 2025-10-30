@@ -116,7 +116,7 @@ const MintBatchCredentialsForm: React.FC<MintBatchCredentialsFormProps> = ({ onB
               <Button
                 type="button"
                 onClick={() => removeCredentialEntry(index)}
-                variant="destructive"
+                variant="danger"
                 className="absolute top-2 right-2"
               >
                 Remove
