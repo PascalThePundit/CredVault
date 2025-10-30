@@ -22,11 +22,12 @@ const MintBatchCredentialsForm: React.FC<MintBatchCredentialsFormProps> = ({ onB
   const handleCredentialChange = (index: number, field: keyof CredentialData, value: string | number) => {
     const newCredentials = [...credentials];
     if (field === 'issueDate') {
-      // Ensure issueDate is always a number (timestamp)
-      newCredentials[index][field] = typeof value === 'string' ? new Date(value).getTime() / 1000 : value;
+      newCredentials[index].issueDate = typeof value === 'string' ? new Date(value).getTime() / 1000 : (value as number);
     } else {
       // For string fields, ensure value is a string
-      newCredentials[index][field] = value as string;
+      // We need to cast newCredentials[index] to any to allow assignment to 'field'
+      // as TypeScript cannot guarantee 'field' is a string key at this point.
+      (newCredentials[index] as any)[field] = value;
     }
     setCredentials(newCredentials);
   };
