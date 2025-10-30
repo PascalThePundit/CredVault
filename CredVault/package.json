@@ -1,0 +1,44 @@
+{
+  "name": "credvault",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "lint": "next lint",
+    "test": "ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.test.ts",
+    "test-frontend": "node tests/frontend.test.js",
+    "dev-server": "node server.js"
+  },
+  "dependencies": {
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/wallet-adapter-wallets": "^0.19.23",
+    "@solana/web3.js": "^1.95.3",
+    "@project-serum/anchor": "^0.26.0",
+    "@solana/spl-token": "^0.4.8",
+    "next": "14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "bn.js": "^5.2.1",
+    "react-hot-toast": "^2.4.1",
+    "ipfs-http-client": "^60.0.1",
+    "bs58": "^5.0.0",
+    "qrcode.react": "^3.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "@types/node": "^20.8.2",
+    "@types/react": "^18.2.24",
+    "@types/react-dom": "^18.2.8",
+    "@types/bn.js": "^5.1.1",
+    "@types/qrcode.react": "^1.0.2",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "14.0.0"
+  }
+}

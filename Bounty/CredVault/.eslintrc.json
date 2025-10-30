@@ -1,0 +1,6 @@
+{
+  "compiler": {
+    "styledComponents": true
+  },
+  "extends": "next/core-web-vitals"
+}
